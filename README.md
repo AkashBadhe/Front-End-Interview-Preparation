@@ -27,6 +27,10 @@ Within the function, we first declare the `name` variable with the `var` keyword
 
 Variables with the `let` keyword (and `const`) are hoisted, but unlike `var`, don't get <i>initialized</i>. They are not accessible before the line we declare (initialize) them. This is called the "temporal dead zone". When we try to access the variables before they are declared, JavaScript throws a `ReferenceError`.
 
+Variables declared with let or const are hoisted WITHOUT a default initialization. So accessing them before the line they were declared throws ReferenceError: Cannot access 'variable' before initialization.
+
+But variables declared with var are hoisted WITH a default initialization of undefined. So accessing them before the line they were declared returns undefined.
+
 </p>
 </details>
 
